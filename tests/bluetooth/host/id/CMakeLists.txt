@@ -7,7 +7,9 @@ add_library(mocks STATIC
             mocks/addr.c
             mocks/crypto.c
             mocks/net_buf.c
+            mocks/net_buf_expects.c
             mocks/hci_core.c
+            mocks/hci_core_expects.c
 
             ${ZEPHYR_BASE}/subsys/bluetooth/host/id.c
             ${ZEPHYR_BASE}/subsys/bluetooth/common/addr.c
