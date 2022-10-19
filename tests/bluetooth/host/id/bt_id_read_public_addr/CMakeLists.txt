@@ -6,6 +6,11 @@ FILE(GLOB SOURCES src/*.c)
 
 project(bt_id_read_public_addr)
 add_compile_definitions(test_unit_name="${PROJECT_NAME}")
+
+include_directories(BEFORE
+    $ENV{ZEPHYR_BASE}/zephyr/tests/bluetooth/host/id/force_mocks
+)
+
 find_package(Zephyr COMPONENTS unittest HINTS $ENV{ZEPHYR_BASE})
 
 add_subdirectory(${ZEPHYR_BASE}/tests/bluetooth/host host_mocks)
